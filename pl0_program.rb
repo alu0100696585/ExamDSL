@@ -13,13 +13,5 @@ class Pl0program
   belongs_to :user
 end
 
-class User
-  include DataMapper::Resource
-  
-  property :username, String, :key => true
-  has n, :pl0programs
-  
-end
-
 DataMapper.finalize
 DataMapper.auto_upgrade!
